@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SequencerService } from './sequencer.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'REST POC';
+  sequencers;
+
+  constructor(private sequencerService: SequencerService) {
+    this.sequencers = sequencerService.getSequencers();
+  }
 }
