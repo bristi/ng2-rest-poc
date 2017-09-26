@@ -11,7 +11,7 @@ export class SequencerService {
 
   getSequencers(): Observable<Sequencer[]> {
     return this.http.get(
-      'http://ri-ngs-as02-u.ri-domain.local/api/v1/sequencers',
+      'http://ri-ngs-as02-u.ri-domain.local/api/v1/sequencers/',
       {withCredentials: true}
     )
       .map((res: Response) => res.json())
