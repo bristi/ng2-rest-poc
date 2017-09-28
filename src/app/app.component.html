@@ -11,3 +11,11 @@
     <li *ngFor="let sequencer of sequencers | async">{{sequencer.name}}</li>
   </ul>
 </div>
+
+<div>
+  <h4>Some run details:</h4>
+  <ul>
+    <li>name: {{run.name}}</li>
+    <li *ngFor="let m of run.metadata_relevant">metadata: {{m.A}}: {{m.V}}</li>
+  </ul>
+</div>

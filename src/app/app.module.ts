@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SequencerService } from './sequencer.service';
+import { RunService } from './run.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { SequencerService } from './sequencer.service';
     BrowserModule,
     HttpModule
   ],
-  providers: [SequencerService],
+  providers: [SequencerService, RunService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
